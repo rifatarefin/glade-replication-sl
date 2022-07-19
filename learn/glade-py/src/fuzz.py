@@ -165,7 +165,7 @@ import json
 import check
 def main(fn):
     open('../../seeds/%s_inputs.txt' % fn, 'w').close()   # erase file content
-    with open("../../handwritten/" + fn + ".json") as f: # synthesized handwritten
+    with open("../../synthesized/" + fn + ".json") as f: # synthesized handwritten
         mgrammar = json.load(fp=f)
     fuzzer = LimitFuzzer(mgrammar)
     correct = 0
